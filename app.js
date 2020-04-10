@@ -1,6 +1,6 @@
 const sliders = document.querySelectorAll('.slide-in');
 
-function x() {
+function scrl() {
 
     const nav = document.querySelector('#nbr');
     var test = document.querySelector('main');
@@ -19,15 +19,14 @@ function x() {
 
 function myFunction() {
     var x = document.querySelector('#nbr');
- bn
+
     if (x.className === "navbar") {
         x.className += " responsive";
         x.style.backgroundColor = 'white';
         x.style.color = 'black';
     } else {
-        x.style.backgroundColor = 'transparent';
-        x.style.color = 'white';
         x.className = "navbar";
+        scrl();
     }
 }
 
