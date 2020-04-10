@@ -653,17 +653,17 @@ p {
         flex-direction: column;
     }
     .navbar.responsive .dropdown {
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
         transform: translateY(0px);
         width: 100%;
-        opacity: 1;
+        height: 100%;
     }
     .navbar div:not(:first-child) {
         width: 100%;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
         color: black;
         transform: translateY(-500px);
-        opacity: 0;
+        height: 0;
     }
     .icon {
         float: right;
