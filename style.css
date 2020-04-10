@@ -674,3 +674,33 @@ p {
         width: 100%;
     }
 }
+
+
+/* .container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    border: 1px solid red;
+    overflow: hidden;
+} */
+
+.slide {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    /* transform: scale(0); */
+    /* transform: translateX(100vw); */
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.showing {
+    z-index: 1;
+    transform: none;
+    opacity: 1;
+}

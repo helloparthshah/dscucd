@@ -51,3 +51,29 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 sliders.forEach(slider => {
     appearOnScroll.observe(slider);
 })
+
+const first = document.querySelector('.slide');
+const slide = () => {
+    const before = document.querySelector('.showing');
+    if (before) {
+        before
+            .classList
+            .remove('showing');
+        const next = before.nextElementSibling;
+        if (next) {
+            next
+                .classList
+                .add('showing')
+        } else {
+            first
+                .classList
+                .add('showing');
+        }
+    } else {
+        first
+            .classList
+            .add('showing');
+    }
+}
+slide();
+setInterval(slide, 3000);
