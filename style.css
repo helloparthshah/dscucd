@@ -265,10 +265,6 @@ html {
     z-index: -1;
 }
 
-.static {
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-
 .bg1::after {
     background-image: url("https://i.imgur.com/cB8yvSS.png");
     width: 100vw;
@@ -429,11 +425,16 @@ p {
     margin-left: 10px;
 }
 
+.row {
+    width: 100vw;
+    height: 100%;
+}
+
 .column {
     text-align: center;
     float: left;
     width: 25%;
-    /* padding: 80px; */
+    padding: 80px;
     height: 100%;
     column-rule-width: 10px;
     column-rule: #002d5b;
@@ -587,7 +588,6 @@ p {
 }
 
 .memb {
-    /* background: url("https://nyrevconnect.com/wp-content/uploads/2017/06/Placeholder_staff_photo-e1505825573317.png"); */
     border-radius: 100px;
     height: 200px;
     width: 200px;
