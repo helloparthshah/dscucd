@@ -8,7 +8,7 @@
 
 body,
 html {
-    overflow: overlay;
+    overflow: hidden;
 }
 
 .artboard {
@@ -26,6 +26,7 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     position: absolute;
+    overflow: hidden;
 }
 
 .domino>div {
@@ -566,8 +567,7 @@ p {
 }
 
 .card__description {
-    text-transform: uppercase;
-    font-size: 60px;
+    font-size: 20px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -587,7 +587,7 @@ p {
 }
 
 .memb {
-    background: url("https://nyrevconnect.com/wp-content/uploads/2017/06/Placeholder_staff_photo-e1505825573317.png");
+    /* background: url("https://nyrevconnect.com/wp-content/uploads/2017/06/Placeholder_staff_photo-e1505825573317.png"); */
     border-radius: 100px;
     height: 200px;
     width: 200px;

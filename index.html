@@ -177,7 +177,7 @@
                 iDiv.innerHTML = `<div class="card">
                     <div class="card__side card__side--front card__side--front-1 ">
                         <div class="card__description">
-                            <div class="memb" style="background: url(' https://media-exp1.licdn.com/dms/image/C4D03AQHZn2qIHJhgHA/profile-displayphoto-shrink_200_200/0?e=1588809600&v=beta&t=r_639cUZnjcht-HrgQiW8soCQPIBU14Ivt5oTtIhndQ ');"></div>
+                            <img class="memb" src="${d['Pictures']}" onerror="this.onerror=''; this.src='https://nyrevconnect.com/wp-content/uploads/2017/06/Placeholder_staff_photo-e1505825573317.png;'"></img>
                             <div>
                                 <h1>${d['First Name']} ${d['Last Name']}</h1>
                                 <p>${d['Post']}</p>
@@ -185,11 +185,12 @@
                         </div>
                     </div>
                     <div class="card__side card__side--back">
-                        <div class="card__description">Testing</div>
+                        <div class="card__description">
+                            ${d['Email']}
+                        </div>
                     </div></div>`;
-
                 document.getElementById('test').appendChild(iDiv);
-                console.log(d['First Name'] + ' ' + d['Last Name']);
+                console.log(d['Pictures']);
             })
 
         }
