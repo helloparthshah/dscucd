@@ -381,7 +381,6 @@ svg {
     background-position: center;
     flex: 1.15;
     height: 100vh;
-
 }
 
 .team {
@@ -400,13 +399,14 @@ h1 {
     font-weight: 700;
     padding-bottom: 50px;
 }
+
 h2 {
     font-size: 65px;
     line-height: .950;
     font-weight: 100;
-    padding-bottom: 50px;
 }
-h3{
+
+h3 {
     font-size: 30px;
     line-height: .400;
     font-weight: 100;
@@ -419,28 +419,27 @@ p {
     margin-right: 20px;
     margin-left: 20px;
     line-height: 25px;
-   
 }
 
-p1 {
+.p1 {
     box-align: center;
     font-size: 15px;
     margin-right: 20px;
     margin-left: 10px;
-   
 }
+
 .column {
     text-align: center;
     float: left;
     width: 25%;
-    padding: 80px;
-    height: 100%; 
+    /* padding: 80px; */
+    height: 100%;
     column-rule-width: 10px;
     column-rule: #002d5b;
     column-rule-style: solid;
     column-rule-color: #002d5b;
-  }
-  
+}
+
 .row:after {
     content: "";
     display: table;
@@ -456,11 +455,12 @@ p1 {
     transition-duration: 2s;
     cursor: pointer;
 }
+
 .button1 {
-    background-color:inherit; 
-    color: inherit; 
+    background-color: inherit;
+    color: inherit;
 }
-  
+
 .button1:hover {
     opacity: 2;
 }
@@ -518,13 +518,18 @@ p1 {
 }
 
 .cards {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(16, calc(50% - 400px));
+    grid-template-rows: minmax(350px, 1fr);
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding: 20px;
     margin-top: 2%;
 }
 
 .card {
-    width: 25%;
+    width: 320px;
     position: relative;
     height: 25em;
     perspective: 150em;
@@ -538,17 +543,16 @@ p1 {
     height: 25em;
     backface-visibility: hidden;
     transition: all 0.6s ease;
-    /* box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2); */
 }
 
 .card__side--front {
-    background: #004080;
-    box-shadow: 37px 37px 74px #002d5b, -37px -37px 74px #0053a5;
+    background: #014A96;
+    border-radius: 50px;
+    /* box-shadow: 37px 37px 74px #002d5b, -37px -37px 74px #0053a5; */
 }
 
 .card__side--back {
-    background: #004080;
-    box-shadow: 37px 37px 74px #002d5b, -37px -37px 74px #0053a5;
+    background: #014A96;
     border-radius: 50px;
     transform: rotateY(180deg);
 }
@@ -573,7 +577,7 @@ p1 {
 }
 
 .card__description h1 {
-    font-size: 60px;
+    font-size: 40px;
     color: white;
 }
 
@@ -660,8 +664,4 @@ p1 {
         max-width: 100vw;
         width: 100%;
     }
-   
-
-  
-}     
-
+}
