@@ -19,7 +19,7 @@ function x() {
 
 function myFunction() {
     var x = document.querySelector('#nbr');
-
+ bn
     if (x.className === "navbar") {
         x.className += " responsive";
         x.style.backgroundColor = 'white';
