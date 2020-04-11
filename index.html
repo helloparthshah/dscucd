@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./slides.css" />
     <title>UCD-DSC</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body onload="Load()">
-
-    <!-- <div id="loader"></div> -->
     <div id="artboard" class="artboard">
         <div class="domino">
             <div></div>
@@ -42,13 +42,13 @@
             </div>
 
             <div class="dropdown">
-                <a href="#" class="dropbtn">Workshops/Events</a>
+                <a href="#wksp" class="dropbtn">Workshops/Events</a>
             </div>
             <div class="dropdown">
                 <a href="#" class="dropbtn">FAQs</a>
             </div>
         </section>
-        <main id="tt" class="wrapper" onscroll="scrl()">
+        <main id="tt" class="mainwrapper" onscroll="scrl()">
             <section id="top" class="section parallax bg1">
                 <svg id="logo" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#676c72" width="1430.34" height="576.476" viewBox="0 0 1430.34 576.476">
                 <g id="Group_3" data-name="Group 3" transform="translate(-626.219 -382.739)">
@@ -89,7 +89,6 @@
                     </div>
                 </div>
             </section>
-
             <section id="team" class="section parallax bg2">
                 <section class="content">
                     <h2 class="slide-in from-down" style="color: #202124; padding-top: 40px;">Our Team</h2>
@@ -98,19 +97,75 @@
                     </div>
                 </section>
             </section>
-            <section class="section static">
-                <div style="width: 100vw; height:100vh; color:white; text-align:center">
-                    <div class="slide" style="height:100%; background-image:url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'); background-size: cover;">
-                        <h2>Helping students bridge the gap between theory and practice</h2>
+            <section id='wksp' class="section static ">
+                <div class="workshop">
+                    <div class="wimg">
                     </div>
-                    <div class="slide" style="height:100%; background-image:url('https://i.pinimg.com/originals/c1/b8/d0/c1b8d0bf43d9eb99b3934a4765b9d74f.jpg'); background-size: cover;">
-                        <h2>Developer Students Clubs can take many forms - from just a few people getting together to host cool training workshops, to large gatherings with demos, tech talks, hackathons and conferences.</h2>
-                    </div>
-                    <div class="slide" style="height:100%; background-image:url('https://static.photocdn.pt/images/articles/2018/03/22/articles/2017_8/landscape_photography_tip_nisi_filters.jpg'); background-size: cover;">
-                        <h2>We work on various technical domains and try to make use of Google Technologies to empower the audience around us.</h2>
+                    <div class="wtext">
+                        <div>
+                            <h2 class="">HackDSC</h2>
+                            <p class="">Developer Student Club at UC Davis is a Google Developers program for university students to learn mobile and web development skills. Students get an opportunity to apply their skills for a live problem sourced from the local
+                                community. In addition to development skills, the students gain problem solving skills as they understand more about the problem and are developing a solution using technology, along with communication skills as they learn
+                                how to ask questions to better understand the problem. The club is intended as a space for students to try out new ideas and collaborate to solve mobile and web development problems!</p>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <section class="static" style="height: 100vh;">
+                <div class="slider-container">
+                    <div class="slider-control left inactive"></div>
+                    <div class="slider-control right"></div>
+                    <ul class="slider-pagi"></ul>
+                    <div class="slider">
+                        <div class="slide slide-0 active">
+                            <div class="slide__bg"></div>
+                            <div class="slide__content">
+                                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                          </svg>
+                                <div class="slide__text">
+                                    <h2 class="slide__text-heading">DSC</h2>
+                                    <p class="slide__text-desc">
+                                        Helping students bridge the gap between theory and practice
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide-1 ">
+                            <div class="slide__bg"></div>
+                            <div class="slide__content">
+                                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                          </svg>
+                                <div class="slide__text">
+                                    <h2 class="slide__text-heading">DSC</h2>
+                                    <p class="slide__text-desc">
+                                        Developer Students Clubs can take many forms - from just a few people getting together to host cool training workshops, to large gatherings with demos, tech talks, hackathons and conferences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide-2">
+                            <div class="slide__bg"></div>
+                            <div class="slide__content">
+                                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                          </svg>
+                                <div class="slide__text">
+                                    <h2 class="slide__text-heading">DSC</h2>
+                                    <p class="slide__text-desc">
+                                        We work on various technical domains and try to make use of Google Technologies to empower the audience around us.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
             <section class="section static" style="height: 50vh;">
                 <div style="text-align: center;">
                     <p>DSC Davis - Powered by Google Developers</p>
@@ -155,60 +210,8 @@
             </section>
         </main>
     </section>
-    <script>
-        var myVar;
-
-        function Load() {
-            myVar = setTimeout(showPage, 4000);
-        }
-
-        function showPage() {
-            document.getElementById("artboard").style.display = "none";
-            document.getElementById("page").style.display = "block";
-        }
-    </script>
-
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-
-    <script type='text/javascript'>
-        var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1a6mqHzX8MpPBKrJs6-XSQKOc9odK8iRQbxM15rZ2tSk/edit?usp=sharing';
-
-        function init() {
-            Tabletop.init({
-                key: publicSpreadsheetUrl,
-                callback: showInfo,
-                simpleSheet: true
-            })
-        }
-
-        function showInfo(data, tabletop) {
-            data.forEach(d => {
-                var iDiv = document.createElement('div');
-
-                iDiv.innerHTML = `<div class="card">
-                    <div class="card__side card__side--front card__side--front-1 ">
-                        <div class="card__description">
-                            <img class="memb" src="${d['Pictures']}" onerror="this.onerror=''; this.src='https://nyrevconnect.com/wp-content/uploads/2017/06/Placeholder_staff_photo-e1505825573317.png;'"></img>
-                            <div>
-                                <h1>${d['First Name']} ${d['Last Name']}</h1>
-                                <p>${d['Post']}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__side card__side--back">
-                        <div class="card__description">
-                            ${d['Email']}
-                        </div>
-                    </div></div>`;
-                document.getElementById('test').appendChild(iDiv);
-                console.log(d['Pictures']);
-            })
-
-        }
-
-        window.addEventListener('DOMContentLoaded', init)
-    </script>
-
+    <script src="./slides.js"></script>
     <script src="./app.js"></script>
 </body>
 

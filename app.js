@@ -1,3 +1,41 @@
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1a6mqHzX8MpPBKrJs6-XSQKOc9odK8iRQbxM15rZ2tSk/edit?usp=sharing';
+
+function init() {
+    Tabletop.init({
+        key: publicSpreadsheetUrl,
+        callback: showInfo,
+        simpleSheet: true
+    })
+}
+
+function showInfo(data, tabletop) {
+    data.forEach(d => {
+        var iDiv = document.createElement('div');
+
+        iDiv.innerHTML = `<div class="card">
+                    <div class="card__side card__side--front card__side--front-1 ">
+                        <div class="card__description">
+                            <img class="memb" src="${d['Pictures']}" onerror="this.onerror=''; this.src='https://nyrevconnect.com/wp-content/uploads/2017/06/Placeholder_staff_photo-e1505825573317.png;'"></img>
+                            <div>
+                                <h1>${d['First Name']} ${d['Last Name']}</h1>
+                                <p>${d['Post']}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back">
+                        <div class="card__description">
+                            ${d['Email']}
+                        </div>
+                    </div></div>`;
+
+        document.getElementById('test').appendChild(iDiv);
+        console.log(d);
+    })
+
+}
+
+window.addEventListener('DOMContentLoaded', init)
+
 const sliders = document.querySelectorAll('.slide-in');
 
 function scrl() {
@@ -52,7 +90,7 @@ sliders.forEach(slider => {
     appearOnScroll.observe(slider);
 })
 
-const first = document.querySelector('.slide');
+/* const first = document.querySelector('.slide');
 const slide = () => {
     const before = document.querySelector('.showing');
     if (before) {
@@ -76,4 +114,97 @@ const slide = () => {
     }
 }
 slide();
-setInterval(slide, 3000);
+setInterval(slide, 3000); */
+var myVar;
+
+function Load() {
+    myVar = setTimeout(showPage, 000);
+}
+
+function showPage() {
+    document.getElementById("artboard").style.display = "none";
+    document.getElementById("page").style.display = "block";
+}
+
+
+
+$(function() {
+    var sliding = (startClientX = startPixelOffset = pixelOffset = currentSlide = 0);
+    slideCount = $(".slide").length;
+
+    $("html").on("mousedown touchstart", slideStart);
+    $("html").on("mouseup touchend", slideEnd);
+    $("html").on("mousemove touchmove", slide);
+
+    /**
+    / Triggers when slide event started
+    */
+    function slideStart(event) {
+        // If it is mobile device redefine event to first touch point
+        if (event.originalEvent.touches) event = event.originalEvent.touches[0];
+        // If sliding not started yet store current touch position to calculate distance in future.
+        if (sliding == 0) {
+            sliding = 1; // Status 1 = slide started.
+            startClientX = event.clientX;
+        }
+    }
+
+    /** Occurs when image is being slid.
+     */
+    function slide(event) {
+        event.preventDefault();
+        if (event.originalEvent.touches) event = event.originalEvent.touches[0];
+        // Distance of slide.
+        var deltaSlide = event.clientX - startClientX;
+        // If sliding started first time and there was a distance.
+        if (sliding == 1 && deltaSlide != 0) {
+            sliding = 2; // Set status to 'actually moving'
+            startPixelOffset = pixelOffset; // Store current offset
+        }
+
+        //  When user move image
+        if (sliding == 2) {
+            // Means that user slide 1 pixel for every 1 pixel of mouse movement.
+            var touchPixelRatio = 1;
+            // Check for user doesn't slide out of boundaries
+            if (
+                (currentSlide == 0 && event.clientX > startClientX) ||
+                (currentSlide == slideCount - 1 && event.clientX < startClientX)
+            )
+            // Set ratio to 3 means image will be moving by 3 pixels each time user moves it's pointer by 1 pixel. (Rubber-band effect)
+                touchPixelRatio = 3;
+            // Calculate move distance.
+            pixelOffset = startPixelOffset + deltaSlide / touchPixelRatio;
+            // Apply moving and remove animation class
+            $("#slides")
+                .css("transform", "translateX(" + pixelOffset + "px")
+                .removeClass();
+        }
+    }
+
+    /** When user release pointer finish slide moving.
+     */
+    function slideEnd(event) {
+        if (sliding == 2) {
+            // Reset sliding.
+            sliding = 0;
+            // Calculate which slide need to be in view.
+            currentSlide =
+                pixelOffset < startPixelOffset ? currentSlide + 1 : currentSlide - 1;
+            // Make sure that unexisting slides weren't selected.
+            currentSlide = Math.min(Math.max(currentSlide, 0), slideCount - 1);
+            // Since in this example slide is full viewport width offset can be calculated according to it.
+            pixelOffset = currentSlide * -$("body").width();
+            // Remove style from DOM (look below)
+            $("#temp").remove();
+            // Add a translate rule dynamically and asign id to it
+            $(
+                '<style id="temp">#slides.animate{transform:translateX(' +
+                pixelOffset +
+                "px)}</style>"
+            ).appendTo("head");
+            // Add animate class to slider and reset transform prop of this class.
+            $("#slides").addClass("animate").css("transform", "");
+        }
+    }
+});
