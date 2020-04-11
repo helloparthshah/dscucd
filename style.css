@@ -545,7 +545,7 @@ h3 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 25em;
+    height: 100%;
     backface-visibility: hidden;
     transition: all 0.6s ease;
     cursor: pointer;
@@ -667,11 +667,8 @@ h4 {
         grid-template-rows: minmax(350px, 1fr);
     }
     .card {
-        height: 10rem;
+        height: 40vh;
         width: 200px;
-    }
-    .card__side {
-        height: 20rem;
     }
     .memb {
         height: 150px;
@@ -733,6 +730,6 @@ h4 {
     }
     #slideshow,
     #team {
-        height: 50vh;
+        height: 60vh;
     }
 }
