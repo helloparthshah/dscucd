@@ -523,9 +523,10 @@ p {
 }
 
 .card {
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
     position: relative;
-    /* height: 25em; */
+    height: 25em;
     perspective: 150em;
 }
 
