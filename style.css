@@ -379,7 +379,7 @@ html {
     text-align: center;
     flex: 1;
     clip-path: polygon(100% 0, 100% 100%, 2em 100%, 0 75%, 2em 50%, 4em 25%, 2em 0%);
-    background-color: #ffa700;
+    background-color: #D2E3FC;
     height: 100vh;
     display: flex;
     align-items: center;
