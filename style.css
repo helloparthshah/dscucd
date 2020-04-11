@@ -441,7 +441,6 @@ p {
     text-align: center;
     float: left;
     width: 25%;
-    padding: 80px;
     height: 100%;
     column-rule-width: 10px;
     column-rule: #002d5b;
@@ -526,7 +525,7 @@ p {
 .card {
     width: 320px;
     position: relative;
-    height: 25em;
+    /* height: 25em; */
     perspective: 150em;
 }
 
@@ -613,11 +612,15 @@ p {
         width: 90%;
         height: auto;
         transition: 0.3s;
+        margin: 0;
+    }
+    .card__side {
+        font-size: 20px;
     }
     .bg1,
     .bg2,
     .section {
-        height: 100vh;
+        height: 50vh;
     }
     .image {
         display: none;
@@ -630,8 +633,11 @@ p {
         font-size: 35px;
         padding-bottom: 20px;
     }
+    h2 {
+        font-size: 30px;
+    }
     p {
-        font-size: 25px;
+        font-size: 16px;
     }
     .cards {
         grid-gap: 5px;
@@ -641,6 +647,13 @@ p {
     .card {
         height: 10rem;
         width: 200px;
+    }
+    .card__side {
+        height: 20rem;
+    }
+    .memb {
+        height: 150px;
+        width: 150px;
     }
     .icon {
         font-size: 30px;
@@ -674,16 +687,6 @@ p {
         width: 100%;
     }
 }
-
-
-/* .container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    border-radius: 5px;
-    border: 1px solid red;
-    overflow: hidden;
-} */
 
 .slide {
     width: 100%;
