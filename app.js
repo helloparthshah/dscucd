@@ -24,7 +24,9 @@ function showInfo(data, tabletop) {
                     </div>
                     <div class="card__side card__side--back">
                         <div class="card__description">
+                        <p>
                             ${d['Email']}
+                            </p>
                         </div>
                     </div></div>`;
 

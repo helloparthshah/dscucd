@@ -246,6 +246,14 @@
     .slide__overlay {
         display: none;
     }
+    .slide__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-60%);
+    }
 }
 
 .slide__overlay path {
@@ -283,6 +291,9 @@
         transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
         transition: transform 0.5s 0.5s, opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
         padding: 0 1rem;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -294,8 +305,9 @@
 
 @media (max-width: 991px) {
     .slide__text-heading {
-        line-height: 20rem;
-        font-size: 3.5rem;
+        /* line-height: 20rem;
+        font-size: 3.5rem; */
+        display: none;
     }
 }
 
@@ -307,6 +319,7 @@
 
 @media (max-width: 991px) {
     .slide__text-desc {
-        display: none;
+        /* display: none; */
+        font-size: 1.8rem;
     }
 }

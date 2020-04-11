@@ -279,7 +279,7 @@ html {
     width: 100vw;
 }
 
-.top svg {
+#top svg {
     width: 90%;
     height: auto;
 }
@@ -413,9 +413,14 @@ h1 {
     padding-bottom: 50px;
 }
 
+.text h2 {
+    font-size: 65px;
+    padding-bottom: 10%;
+    font-weight: 100;
+}
+
 h2 {
     font-size: 65px;
-    line-height: .950;
     font-weight: 100;
 }
 
@@ -424,6 +429,7 @@ h3 {
     line-height: .400;
     font-weight: 100;
     padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .section p {
@@ -432,6 +438,7 @@ h3 {
     margin-right: 20px;
     margin-left: 20px;
     line-height: 25px;
+    color: #676c72;
 }
 
 .p1 {
@@ -444,23 +451,17 @@ h3 {
 .row {
     width: 100vw;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
 }
 
 .column {
-    text-align: center;
-    float: left;
-    width: 25%;
-    height: 100%;
-    column-rule-width: 10px;
-    column-rule: #002d5b;
-    column-rule-style: solid;
-    column-rule-color: #002d5b;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .button {
@@ -547,16 +548,15 @@ h3 {
     height: 25em;
     backface-visibility: hidden;
     transition: all 0.6s ease;
-    cursor: pointer
+    cursor: pointer;
+    background: #33373D;
 }
 
 .card__side--front {
-    background: #4285f4;
     border-radius: 50px;
 }
 
 .card__side--back {
-    background: #4285f4;
     border-radius: 50px;
     transform: rotateY(180deg);
 }
@@ -580,7 +580,7 @@ h3 {
 }
 
 .card__description h1 {
-    font-size: 40px;
+    font-size: 35px;
     color: white;
 }
 
@@ -590,12 +590,35 @@ h3 {
 }
 
 .memb {
-    border-radius: 100px;
+    object-fit: cover;
+    border-radius: 50%;
     height: 200px;
     width: 200px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+}
+
+.foo p {
+    padding-top: 10%;
+    font-size: 2rem;
+    line-height: normal;
+}
+
+.button img {
+    width: 50px;
+    height: 50px;
+}
+
+#footer {
+    height: 50vh;
+}
+
+#slideshow {
+    height: 100vh;
+}
+
+h4 {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #676c72;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -632,7 +655,7 @@ h3 {
         padding-bottom: 20px;
     }
     h2 {
-        font-size: 30px;
+        font-size: 50px;
     }
     p {
         font-size: 16px;
@@ -694,6 +717,22 @@ h3 {
     }
     .wimg,
     .wtext {
+        height: 50vh;
+    }
+    .section p {
+        font-size: 18px;
+        font-weight: 150;
+        margin: 0;
+        line-height: 20px;
+    }
+    .column p {
+        display: none;
+    }
+    #footer {
+        height: 30vh;
+    }
+    #slideshow,
+    #team {
         height: 50vh;
     }
 }
