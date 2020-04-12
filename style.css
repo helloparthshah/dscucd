@@ -386,6 +386,10 @@ html {
     padding-left: 70px;
 }
 
+.wtext h2 {
+    padding-bottom: 5%;
+}
+
 .wimg {
     background-image: url(wbpic1.jpg);
     transform: scale(1.25);
