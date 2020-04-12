@@ -671,7 +671,7 @@ h4 {
     }
     .cards {
         grid-gap: 5px;
-        grid-template-columns: repeat(16, calc(56%));
+        grid-template-columns: repeat(16, calc(70%));
         grid-template-rows: minmax(350px, 1fr);
     }
     .card {
