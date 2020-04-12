@@ -86,6 +86,17 @@
     transform: translate(-50%, -50%) scale(0);
 }
 
+@media (max-width: 991px) {
+    .slider-pagi__elem {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .slider-pagi__elem:before {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+
 .slider-pagi__elem.active:before,
 .slider-pagi__elem:hover:before {
     -webkit-transform: translate(-50%, -50%) scale(1);
