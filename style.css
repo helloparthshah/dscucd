@@ -359,7 +359,7 @@ html {
     background-position: center;
     flex: 1.15;
     height: 100vh;
-    clip-path: polygon(100% 10%, 100% 90%, 6.4% 100%, 0 75%, 2em 50%, 4em 25%, 2em 0%);
+    clip-path: polygon(100% 0%, 100% 90%, 6.4% 100%, 0 75%, 2em 50%, 4em 25%, 2em 0%);
 }
 
 .workshop {
@@ -385,7 +385,7 @@ html {
     background-position: center;
     flex: 1;
     height: 100vh;
-    clip-path: polygon(0 5%, 10% 10%, 100% 0%, 340px 100%, 0% 100%);
+    clip-path: polygon(0% 10%, 100% 0%, 340px 100%, 0% 100%);
 }
 
 .team {
