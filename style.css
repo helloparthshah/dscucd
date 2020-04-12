@@ -251,7 +251,7 @@ html {
 }
 
 .static {
-    background-color: #F1F3F4;
+    background-color: #D2E3FC;
 }
 
 .parallax::after {
@@ -347,13 +347,6 @@ html {
     float: left;
 }
 
-.about {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
 .text {
     text-align: center;
     color: black;
@@ -361,11 +354,12 @@ html {
 }
 
 .image {
-    background-image: url("wbpic1.jpg");
+    background-image: url(wbpic1.jpg);
     background-size: cover;
     background-position: center;
     flex: 1.15;
     height: 100vh;
+    clip-path: polygon(100% 10%, 100% 90%, 6.4% 100%, 0 75%, 2em 50%, 4em 25%, 2em 0%);
 }
 
 .workshop {
@@ -377,13 +371,8 @@ html {
 
 .wtext {
     text-align: center;
+    color: black;
     flex: 1;
-    clip-path: polygon(100% 0, 100% 100%, 2em 100%, 0 75%, 2em 50%, 4em 25%, 2em 0%);
-    background-color: #D2E3FC;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-left: 70px;
 }
 
 .wtext h2 {
@@ -392,11 +381,11 @@ html {
 
 .wimg {
     background-image: url(wbpic1.jpg);
-    transform: scale(1.25);
     background-size: cover;
     background-position: center;
     flex: 1;
     height: 100vh;
+    clip-path: polygon(0 5%, 10% 10%, 100% 0%, 340px 100%, 0% 100%);
 }
 
 .team {
@@ -628,6 +617,13 @@ h4 {
     color: #676c72;
 }
 
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 1000px) {
     .from-down1,
     .from-down2.from-down3 {
@@ -650,8 +646,11 @@ h4 {
     .section {
         height: 100vh;
     }
-    .image {
-        display: none;
+    #about {
+        display: block;
+    }
+    .wimg {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 92%, 25% 100%, 0% 94%);
     }
     #im {
         height: 40px;
@@ -715,12 +714,16 @@ h4 {
     .workshop {
         display: block;
     }
-    .wtext {
+    .image {
         clip-path: polygon(0% 0.75em, 25% 1.5em, 50% 0.75em, 75% 0, 100% 0.75em, 100% 100%, 0 100%);
-        padding-left: 0;
+    }
+    .about h2 {
+        padding: 0;
     }
     .wimg,
-    .wtext {
+    .wtext,
+    .image,
+    .text {
         height: 50vh;
     }
     .section p {
