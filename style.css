@@ -612,6 +612,9 @@ h3 {
 }
 
 #footer {
+    background: linear-gradient(90deg, #eee 1%, transparent 5%) 1px 0, linear-gradient(180deg, #eee 1%, transparent 5%) 1px 0, #fff;
+    background-size: 50px 50px;
+    width: 100vw;
     height: 50vh;
 }
 
