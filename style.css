@@ -380,7 +380,7 @@ html {
 }
 
 .wimg {
-    background-image: url(wbpic1.jpg);
+    background-image: url(https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b);
     background-size: cover;
     background-position: center;
     flex: 1;
