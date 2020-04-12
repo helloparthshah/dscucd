@@ -516,7 +516,7 @@ h3 {
 .cards {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(16, calc(50% - 400px));
+    grid-template-columns: repeat(16, calc(24%));
     grid-template-rows: minmax(350px, 1fr);
     overflow-x: scroll;
     overflow-y: hidden;
@@ -585,8 +585,10 @@ h3 {
 .memb {
     object-fit: cover;
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    max-height: 200px;
+    height: auto;
+    width: 80%;
+    max-width: 200px;
 }
 
 .foo p {
@@ -669,7 +671,7 @@ h4 {
     }
     .cards {
         grid-gap: 5px;
-        grid-template-columns: repeat(16, calc(50% + 70px));
+        grid-template-columns: repeat(16, calc(56%));
         grid-template-rows: minmax(350px, 1fr);
     }
     .card {
