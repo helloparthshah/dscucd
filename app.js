@@ -77,7 +77,7 @@ const appearOptions = {
     rootMargin: "0px 0px -250px 0px"
 };
 
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
             return;
@@ -105,7 +105,7 @@ function showPage() {
 
 
 
-$(function() {
+$(function () {
     var sliding = (startClientX = startPixelOffset = pixelOffset = currentSlide = 0);
     slideCount = $(".slide").length;
 
@@ -148,7 +148,7 @@ $(function() {
                 (currentSlide == 0 && event.clientX > startClientX) ||
                 (currentSlide == slideCount - 1 && event.clientX < startClientX)
             )
-            // Set ratio to 3 means image will be moving by 3 pixels each time user moves it's pointer by 1 pixel. (Rubber-band effect)
+                // Set ratio to 3 means image will be moving by 3 pixels each time user moves it's pointer by 1 pixel. (Rubber-band effect)
                 touchPixelRatio = 3;
             // Calculate move distance.
             pixelOffset = startPixelOffset + deltaSlide / touchPixelRatio;
