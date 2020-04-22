@@ -385,7 +385,7 @@ html {
     background-position: center;
     flex: 1;
     height: 100vh;
-    clip-path: polygon(0% 10%, 100% 0%, 340px 100%, 0% 100%);
+    clip-path: polygon(0% 10%, 100% 0%, 364px 100%, 0% 100%);
 }
 
 .team {

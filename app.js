@@ -71,6 +71,12 @@ function myFunction() {
     }
 }
 
+function test() {
+    var x = document.querySelector('#nbr');
+    x.className = "navbar";
+    scrl();
+}
+
 console.log(sliders);
 
 const appearOptions = {
