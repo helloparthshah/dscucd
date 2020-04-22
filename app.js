@@ -1,3 +1,4 @@
+
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1a6mqHzX8MpPBKrJs6-XSQKOc9odK8iRQbxM15rZ2tSk/edit?usp=sharing';
 
 function init() {
@@ -99,6 +100,10 @@ function Load() {
 }
 
 function showPage() {
+
+    particlesJS.load("particles-js", 'assets/config.json');
+    setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 0);
+
     document.getElementById("artboard").style.display = "none";
     document.getElementById("page").style.display = "block";
 }

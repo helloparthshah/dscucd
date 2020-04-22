@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="./slides.css" />
     <title>UCD-DSC</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        /* document.addEventListener('DOMContentLoaded', function () {
+            particlesJS.load("particles-js", 'assets/config.json');
+            setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 0);
+        }); */
+    </script>
 </head>
 
 <body onload="Load()">
@@ -251,15 +258,7 @@
             </section>
         </main>
     </section>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-    <script>
-        window.addEventListener('load', function () {
-            particlesJS.load("particles-js", "config.json", function () {
-                console.log('callback - particles.js config loaded');
-            });
-        });
-    </script>
+    
     <script src="./slides.js"></script>
     <script src="./app.js"></script>
 </body>
