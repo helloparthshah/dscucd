@@ -44,7 +44,8 @@ const sliders = document.querySelectorAll('.slide-in');
 function scrl() {
 
     const nav = document.querySelector('#nbr');
-    var test = document.querySelector('main');
+    var test = document.querySelector('html');
+    console.log(test.scrollTop);
 
     if (test.scrollTop <= 100 && nav.className === "navbar") {
         nav.style.backgroundColor = 'transparent';
@@ -108,10 +109,12 @@ function Load() {
 function showPage() {
 
     particlesJS.load("particles-js", 'assets/config.json');
+    particlesJS.load("team", 'assets/config.json');
     setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 0);
 
     document.getElementById("artboard").style.display = "none";
     document.getElementById("page").style.display = "block";
+    document.getElementById("nbr").style.display = "flex";
 }
 
 

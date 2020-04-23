@@ -18,7 +18,7 @@
     </script>
 </head>
 
-<body onload="Load()">
+<body onload="Load()" onscroll="scrl()">
     <div id="artboard" class="artboard">
         <div class="domino">
             <div></div>
@@ -27,36 +27,36 @@
             <div></div>
         </div>
     </div>
+    <section id="nbr" style="display: none;" class="navbar">
+        <div style="width: 100%;">
+            <img id="im"
+                src="https://cdn.clipart.email/cc2feee925efe50e51ff8a2533e26852_github-dsc-jiit-128-issue-tracker-a-simple-web-application-_4050-371.png" />
 
-    <section id="page" style="display: none;" class="animate-bottom">
-        <section id="nbr" class="navbar">
-            <div style="width: 100%;">
-                <img id="im"
-                    src="https://cdn.clipart.email/cc2feee925efe50e51ff8a2533e26852_github-dsc-jiit-128-issue-tracker-a-simple-web-application-_4050-371.png" />
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                &#9776;
+            </a>
+        </div>
+        <div class="dropdown">
+            <a href="#particles-js" class="dropbtn" onclick="test()">Home</a>
+        </div>
+        <div class="dropdown">
+            <a href="#about" class="dropbtn" onclick="test()">About</a>
+        </div>
+        <div class="dropdown">
+            <a href="#wksp" class="dropbtn" onclick="test()">Events</a>
+        </div>
+        <div class="dropdown">
+            <a href="#team" class="dropbtn" onclick="test()">Team</a>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropbtn" onclick="test()">FAQs</a>
+        </div>
+    </section>
+    <div id="page" style="display: none;" class="animate-bottom">
 
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    &#9776;
-                </a>
-            </div>
-            <div class="dropdown">
-                <a href="#particles-js" class="dropbtn" onclick="test()">Home</a>
-            </div>
-            <div class="dropdown">
-                <a href="#about" class="dropbtn" onclick="test()">About</a>
-            </div>
-            <div class="dropdown">
-                <a href="#wksp" class="dropbtn" onclick="test()">Events</a>
-            </div>
-            <div class="dropdown">
-                <a href="#team" class="dropbtn" onclick="test()">Team</a>
-            </div>
-            <div class="dropdown">
-                <a href="#" class="dropbtn" onclick="test()">FAQs</a>
-            </div>
-        </section>
-        <main id="tt" class="mainwrapper" onscroll="scrl()">
-            <section id="particles-js" class="section parallax bg1">
-                <div id="hd">
+        <section>
+            <section id="particles-js" class="section parallax bg1 ">
+                <div class="hd">
                     <svg id="logo" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#676c72" width="1430.34"
                         height="576.476" viewBox="0 0 1430.34 576.476">
                         <g id="Group_3" data-name="Group 3" transform="translate(-626.219 -382.739)">
@@ -98,167 +98,168 @@
                     <h4>#developerstudentclubs #googlestudents #growwithgoogle </h4>
                 </div>
             </section>
-            <section class="section static">
-                <div id="about" class="about">
-                    <div class="text">
-                        <h2 class="slide-in from-left">About DSC</h2>
-                        <p class="slide-in from-left">Developer Student Club at UC Davis is a Google Developers program
-                            for university students to learn mobile and web development skills. Students get an
-                            opportunity to apply their skills for a live problem sourced from the local community.
-                            In addition to development skills, the students gain problem solving skills as they
-                            understand more about the problem and are developing a solution using technology, along with
-                            communication skills as they learn how to ask
-                            questions to better understand the problem. The club is intended as a space for students to
-                            try out new ideas and collaborate to solve mobile and web development problems!</p>
-                    </div>
-
-                    <div class="image">
-                    </div>
-                </div>
-            </section>
-
-            <section id='wksp' class="section static ">
-                <div class="workshop">
-                    <div class="wimg ">
-                    </div>
-                    <div class="wtext">
-                        <h2 class="slide-in from-right">What is HackDSC?</h2>
-                        <p class="slide-in from-right">Hack DSC is a virtual hackathon where student developers across
-                            North-America like you can help locate and solve local community problems. This Hackathon is
-                            designed to help you realize, nurture, and develop your ability and potential
-                            to become future programmers, hackers, and designers and allow you to help your local
-                            communities and create a legacy.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="slideshow" class="static">
-                <div class="slider-container">
-                    <div class="slider-control left inactive"></div>
-                    <div class="slider-control right"></div>
-                    <ul class="slider-pagi"></ul>
-                    <div class="slider">
-                        <div class="slide slide-0 active">
-                            <div class="slide__bg"></div>
-                            <div class="slide__content">
-                                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                                </svg>
-                                <div class="slide__text">
-                                    <h2 class="slide__text-heading">DSC</h2>
-                                    <p class="slide__text-desc">
-                                        Helping students bridge the gap between theory and practice.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-1 ">
-                            <div class="slide__bg"></div>
-                            <div class="slide__content">
-                                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                                </svg>
-                                <div class="slide__text">
-                                    <h2 class="slide__text-heading">DSC</h2>
-                                    <p class="slide__text-desc">
-                                        Developer Students Clubs can take many forms - from just a few people getting
-                                        together to host cool training workshops, to large gatherings with demos, tech
-                                        talks, hackathons and conferences.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-2">
-                            <div class="slide__bg"></div>
-                            <div class="slide__content">
-                                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                                </svg>
-                                <div class="slide__text">
-                                    <h2 class="slide__text-heading">DSC</h2>
-                                    <p class="slide__text-desc">
-                                        We work on various technical domains and try to make use of Google Technologies
-                                        to empower the audience around us.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-3">
-                            <div class="slide__bg"></div>
-                            <div class="slide__content">
-                                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                                </svg>
-                                <div class="slide__text">
-                                    <h2 class="slide__text-heading">DSC</h2>
-                                    <p class="slide__text-desc">
-                                        Providing students with an unprecedented range of tools to help them make a
-                                        change in their community.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+        </section>
+        <section class="section static">
+            <div id="about" class="about">
+                <div class="text">
+                    <h2 class="slide-in from-left">About DSC</h2>
+                    <p class="slide-in from-left">Developer Student Club at UC Davis is a Google Developers program
+                        for university students to learn mobile and web development skills. Students get an
+                        opportunity to apply their skills for a live problem sourced from the local community.
+                        In addition to development skills, the students gain problem solving skills as they
+                        understand more about the problem and are developing a solution using technology, along with
+                        communication skills as they learn how to ask
+                        questions to better understand the problem. The club is intended as a space for students to
+                        try out new ideas and collaborate to solve mobile and web development problems!</p>
                 </div>
 
-            </section>
-            <section id="team" class="section parallax bg2">
+                <div class="image">
+                </div>
+            </div>
+        </section>
+
+        <section id='wksp' class="section static ">
+            <div class="workshop">
+                <div class="wimg ">
+                </div>
+                <div class="wtext">
+                    <h2 class="slide-in from-right">What is HackDSC?</h2>
+                    <p class="slide-in from-right">Hack DSC is a virtual hackathon where student developers across
+                        North-America like you can help locate and solve local community problems. This Hackathon is
+                        designed to help you realize, nurture, and develop your ability and potential
+                        to become future programmers, hackers, and designers and allow you to help your local
+                        communities and create a legacy.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="slideshow" class="static">
+            <div class="slider-container">
+                <div class="slider-control left inactive"></div>
+                <div class="slider-control right"></div>
+                <ul class="slider-pagi"></ul>
+                <div class="slider">
+                    <div class="slide slide-0 active">
+                        <div class="slide__bg"></div>
+                        <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                                <h2 class="slide__text-heading">DSC</h2>
+                                <p class="slide__text-desc">
+                                    Helping students bridge the gap between theory and practice.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide slide-1 ">
+                        <div class="slide__bg"></div>
+                        <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                                <h2 class="slide__text-heading">DSC</h2>
+                                <p class="slide__text-desc">
+                                    Developer Students Clubs can take many forms - from just a few people getting
+                                    together to host cool training workshops, to large gatherings with demos, tech
+                                    talks, hackathons and conferences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide slide-2">
+                        <div class="slide__bg"></div>
+                        <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                                <h2 class="slide__text-heading">DSC</h2>
+                                <p class="slide__text-desc">
+                                    We work on various technical domains and try to make use of Google Technologies
+                                    to empower the audience around us.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide slide-3">
+                        <div class="slide__bg"></div>
+                        <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                                <h2 class="slide__text-heading">DSC</h2>
+                                <p class="slide__text-desc">
+                                    Providing students with an unprecedented range of tools to help them make a
+                                    change in their community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section id="team" class="section parallax bg2">
+            <div class="hd">
                 <section class="content">
                     <h2 class="slide-in from-down" style="color: #202124; padding-top: 40px;">Our Team</h2>
                     <div class="cards slide-in from-down" id="test">
-
                     </div>
                 </section>
-            </section>
-            <section id="footer" class="section static">
-                <div class="foo" style="text-align: center;">
-                    <p>DSC Davis - Powered by Google Developers<br> University of California, Davis<br> 1 Shields Ave,
-                        Davis, CA 95616</p>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <div>
-                            <a href="mailto:dscucdavis@gmail.com">
-                                <button class="button button 1"><img
-                                        src="https://www.shareicon.net/data/512x512/2015/12/02/681011_email_512x512.png"></button>
-                            </a>
+            </div>
+        </section>
+        <section id="footer" class="section static">
+            <div class="foo" style="text-align: center;">
+                <p>DSC Davis - Powered by Google Developers<br> University of California, Davis<br> 1 Shields Ave,
+                    Davis, CA 95616</p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div>
+                        <a href="mailto:dscucdavis@gmail.com">
+                            <button class="button button 1"><img
+                                    src="https://www.shareicon.net/data/512x512/2015/12/02/681011_email_512x512.png"></button>
+                        </a>
 
-                            <p class="p1">dscucdavis@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div>
-                            <a href="https://www.facebook.com/dscucdavis/">
-                                <button class="button button 1"><img
-                                        src="https://i.ya-webdesign.com/images/facebook-logo-2016-png-6.png"></button>
-                            </a>
-                        </div>
-                        <p class="p1">@dsucdavis</p>
-                    </div>
-                    <div class="column">
-                        <div>
-                            <a href="https://www.instagram.com/dsc_ucdavis/">
-                                <button class="button button 1"><img
-                                        src="https://www.edigitalagency.com.au/wp-content/uploads/Instagram-logo-black-borders-png-transparent-background.png"></button>
-                            </a>
-                        </div>
-                        <p class="p1">@dsc_ucdavis</p>
-                    </div>
-                    <div class="column">
-                        <div>
-                            <a href="https://www.linkedin.com/company/30628397/">
-                                <button class="button button 1"><img
-                                        src="https://i.ya-webdesign.com/images/linkedin-logo-png-transparent-background-4.png"></button>
-                            </a>
-                        </div>
-                        <p class="p1"> Developer Student Club @ UCDavis</p>
+                        <p class="p1">dscucdavis@gmail.com</p>
                     </div>
                 </div>
-            </section>
-        </main>
-    </section>
+                <div class="column">
+                    <div>
+                        <a href="https://www.facebook.com/dscucdavis/">
+                            <button class="button button 1"><img
+                                    src="https://i.ya-webdesign.com/images/facebook-logo-2016-png-6.png"></button>
+                        </a>
+                    </div>
+                    <p class="p1">@dsucdavis</p>
+                </div>
+                <div class="column">
+                    <div>
+                        <a href="https://www.instagram.com/dsc_ucdavis/">
+                            <button class="button button 1"><img
+                                    src="https://www.edigitalagency.com.au/wp-content/uploads/Instagram-logo-black-borders-png-transparent-background.png"></button>
+                        </a>
+                    </div>
+                    <p class="p1">@dsc_ucdavis</p>
+                </div>
+                <div class="column">
+                    <div>
+                        <a href="https://www.linkedin.com/company/30628397/">
+                            <button class="button button 1"><img
+                                    src="https://i.ya-webdesign.com/images/linkedin-logo-png-transparent-background-4.png"></button>
+                        </a>
+                    </div>
+                    <p class="p1"> Developer Student Club @ UCDavis</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="./slides.js"></script>
     <script src="./app.js"></script>
