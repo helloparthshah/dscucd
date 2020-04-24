@@ -25,13 +25,14 @@ function showInfo(data, tabletop) {
                     <div class="card__side card__side--back">
                         <div class="card__description">
                         <p>
-                            ${d['Email']}
+                            <a href='mailto:${d['Email']}' style="color: inherit; text-decoration: inherit;">${d['Email']}</a>
                             </p>
                         </div>
                     </div></div>`;
 
         document.getElementById('test').appendChild(iDiv);
-        console.log(d);
+        document.getElementById('test').style.gridTemplateColumns = `repeat(${data.length}, calc(24%))`;
+        // console.log(d);
     })
 
 }
@@ -39,7 +40,6 @@ function showInfo(data, tabletop) {
 window.addEventListener('DOMContentLoaded', init)
 
 const sliders = document.querySelectorAll('.slide-in');
-scrl();
 
 function scrl() {
 
@@ -97,7 +97,7 @@ function test() {
     scrl();
 }
 
-console.log(sliders);
+// console.log(sliders);
 
 const appearOptions = {
     threshold: 0,
@@ -133,6 +133,7 @@ function showPage() {
     document.getElementById("artboard").style.display = "none";
     document.getElementById("page").style.display = "block";
     document.getElementById("nbr").style.display = "flex";
+    scrl();
 }
 
 
